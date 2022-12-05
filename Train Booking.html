@@ -1,0 +1,159 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            text-align: center;
+            font-size: 65px;
+            border: 1px solid black;
+            background-color: rgb(0,100,0);
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input[type=submit]{
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+            margin: 50px 50px 50px 675px;
+            background-color: lightgray;
+            font-family: bloger sans;
+            font-size: 25px;   
+            color: white;
+            background-color: rgb(0,100,0);
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        input[type=text]{
+            margin-bottom: 6px;
+            margin-left: 650px;
+            width: 165px;
+            padding: 8px;
+        }
+        input[type=date]{
+            margin-bottom: 6px;
+            width: 165px;
+            margin-left: 650px;
+            padding: 8px;
+        }
+        input[list=general]{
+            margin-bottom: 6px;
+            margin-left: 650px;
+            padding: 8px;
+            width: 165px;
+        }
+        input[list=class]{
+            margin-bottom: 20px;
+            margin-left: 650px;
+            padding: 8px;
+            width: 165px;
+        }
+        .main-div{
+            border: 2px solid black;
+            margin-left: -550px;
+            margin-right: 1000px;
+            background-color: white;
+        }
+        .main-div label{
+            padding-left: 650px;
+            margin-top: 150px;
+            font-size: 20px;
+            color: black;
+        }
+        input[type=checkbox]{
+            margin-left: 650px;
+            margin-right: 400px;
+            padding: 8px;
+        }
+        .main-div1 label{
+            margin-left: -410px;
+            padding: 10px;
+            font-size: 20px;
+            color: black;
+            
+        }
+        .main-div p{
+           margin-left: 540px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            border: 2px;
+            background-color: rgb(0,100,0);
+            color: white;
+        }
+    </style>
+</head>
+<body background="train back.jpg">
+    <h1>
+        RAIL SERVICES
+    </h1>
+    <form action="" method="">
+        <div class="main-div">
+            <p>BOOK TICKET</p>
+            <div>
+                <label for="from">DEPARTURE</label><br>
+            <input type="text" placeholder="From"><br>
+                <label for="to">DESTINATION</label><br>
+            <input type="text" placeholder="To"><br>
+                <label for="journey date">Select Journey Date</label><br>
+            <input type="date"><br>
+                <label for="Reservation Type">Reservation Type</label><br>
+            <input list="general" placeholder="General"><br>
+            <datalist id="general">
+                <option value="General"></option>
+                <option value="Ladies"></option>
+                <option value="Lower Berth/Senior Citizen"></option>
+                <option value="Person With Disability"></option>
+                <option value="Tatkal"></option>
+                <option value="Premium Tatkal"></option>
+            </datalist>
+                <label for="class">Class</label><br>
+            <input list="class" placeholder="All Classes"><br>
+            <datalist id="class">
+                <option value="Anubhuti Class(EA)"></option>
+                <option value="AC First Class(1A)"></option>
+                <option value="Vistadome AC(VA)"></option>
+                <option value="Exec. Chair Car(EC)"></option>
+                <option value="AC 2 Tier(2A)"></option>
+                <option value="First Class(FC)"></option>
+                <option value="AC 3 Tier(3A)"></option>
+                <option value="AC 3 Economy(3E)"></option>
+                <option value="Vistadome Chair Car(VC)"></option>
+                <option value="AC Chair Car(CC)"></option>
+                <option value="Sleeper(SL)"></option>
+                <option value="Vistadome Non AC(VS)"></option>
+                <option value="Second Sitting(2S)"></option>
+
+            </datalist>
+
+            </div>
+        <div class="main-div1">
+            <div>
+                <input type="checkbox" value="person">
+                <label for="person">Person With Disability</label><br>
+                <input type="checkbox" value="flexible">
+                <label for="flexible">Flexible With Date</label><br>
+                <input type="checkbox" value="Berth">
+                <label for="Berth">Train With Available Berth</label><br>
+                <input type="checkbox" value="Pass">
+                <label for="Pass">Train Pass Concession</label><br>
+
+                <input type="submit" value="Find Trains">
+            </div>
+        </div>
+            
+            
+            
+        </div>
+    </form>
+</body>
+</html>

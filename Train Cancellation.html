@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 80px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(0,100,0);
+            color: white;
+            
+        }
+        .main-div{
+            border: 2px solid black;
+            padding: 10px;
+            margin-left: 480px;
+            margin-right: 480px;
+            background-color: white;
+            margin-bottom: 100px;
+            padding-left: 80px;
+            padding-right: 100px;
+        }
+        .main-div a{
+            text-decoration: none;
+        }
+        input[type=text]{
+            padding: 5px;
+            width: 320px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        input[type=submit]{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            margin-left: 130px;
+            cursor: pointer;
+            background-color: rgb(0,100,0);
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+        .main-div p{
+            text-align: center;
+            font-size: 30px;
+            border: 1px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        RAIL SERVICES
+    </h1>
+    <form action="">
+        <div class="main-div">
+            <p>CANCEL TICKET</p>
+            <div>
+                <label for="bid">Enter Booking id</label>
+                <input type="text" id="bid"><br>
+                <label for="pnr">Enter PNR Number</label>
+                <input type="text" id="pnr"><br>
+                <input type="checkbox" id="acc">
+                <label for="acc">I have gone through <a href="cancellation procedure train.html">cancellation procedure</a>and accept to the terms and conditions<a href="cancellation policy train.html">cancellation policy.</a></label>
+                <input type="submit" value="Cancel Ticket" onclick="alert('Are you sure?')">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

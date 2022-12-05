@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket Cancellation</title>
+    <style>
+        h1{
+            font-size: 80px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: orange;
+        }
+        .main-div1{
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 470px;
+            margin-right: 450px;
+        }
+        input[type=text]{
+            padding: 10px;
+            width: 300px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .main-div1 p{
+            text-align: center;
+            margin-top: 0px;
+            background-color: orange;
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-bottom: 25px;
+            font-size: 60px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        label{
+            font-size: 20px;
+            padding: 5px;
+            margin-left: 20px;
+            
+        }
+        input[type=radio]{
+            padding: 10px;
+            margin-top: 15px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        input[type=submit]{
+            margin-top: 25px;
+            margin-left: 70px;
+            width: 200px;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type=checkbox] {
+            padding: 20px;
+            margin-left: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        AIR SERVICES
+    </h1>
+    
+    <form action="">
+        <div class="main-div1">
+            <p>CANCEL BOOKING</p>
+            <label for="bid">Enter Booking Reference Number</label> <br>
+            <input type="text" name="bid" id="bid" placeholder="Reference number"> <br>
+            <label for="ema">Enter email</label> <br>
+            <input type="text" name="ema" id="ema" placeholder="email id"> <br>
+            <label for="pay">Choose Payment Option</label> <br>
+            <input type="radio" name="paym" id="ewa">
+            <label for="ewa">TBC e-wallet</label>
+            <input type="radio" name="paym" id="gate">
+            <label for="gate">Payment Gateway</label> <br>
+            <input type="checkbox" id="acce">
+            <label for="acce">I accept to the <a href="cancellation policy flight.html">cancellation policy</a></label>
+            <input type="submit" onclick="alert('Are you sure?')" value="Cancel Booking">
+        </div>
+    </form>
+</body>
+</html>

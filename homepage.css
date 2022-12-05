@@ -1,0 +1,305 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.menu-bar{
+    background: rgb(0,100,0);
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -80px;
+    transition: transform.2s;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #ffff;
+   
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #ffff;
+}
+.active, .menu-bar ul li:hover{
+    background: #2bab0d;
+    border-radius: 3px;
+    transform: scale(1.0);
+}
+.submenu-1{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-1{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-1 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-1 ul li a:hover{
+    color: #b2ff00;
+} 
+.submenu-2{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-2{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu-2 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-2 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-2 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-2 ul li a:hover{
+    color: #b2ff00;
+}
+.submenu-3{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-3{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu-3 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-3 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-3 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-3 ul li a:hover{
+    color: #b2ff00;
+}
+.submenu-4{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-4{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu-4 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-4 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-4 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-4 ul li a:hover{
+    color: #b2ff00;
+}
+.submenu-5{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-5{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu-5 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-5 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-5 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-5 ul li a:hover{
+    color: #b2ff00;
+}
+
+.submenu-6{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-6{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu-6 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-6 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-6 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-6 ul li a:hover{
+    color: #b2ff00;
+}
+.submenu-7{
+    display: none;
+}
+.menu-bar ul li:hover .submenu-7{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+    
+}
+.menu-bar ul li:hover .submenu-7 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .submenu-7 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+.menu-bar ul li:hover .submenu-7 ul li:last-child{
+    border-bottom: none;
+    
+}
+.menu-bar ul li:hover .submenu-7 ul li a:hover{
+    color: #b2ff00;
+}
+.low{
+    margin-bottom: 0px;
+    background-color: rgba(205, 89, 23, 0.258);
+    margin-right: -80px;
+    margin-bottom: 20px;
+}
+.copy{
+    padding: 10px;
+    margin-top: 290px;
+    margin-left: 40px;
+    margin-bottom: -50px;
+}
+
+.fa-twitter{
+    color: black;
+}
+.fa-instagram{
+    color: black;
+}
+.fa-facebook{
+    color: black;
+}
+.fa-youtube{
+    color: black;
+}
+.fa-telegram{
+    color: black;
+}
+.copy{
+    font-size: 20px;
+    margin-right: 800px;
+}
+.social{
+    margin-left: 600px;
+}
+.fa {
+    padding: -55px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-top:-250px;
+    margin-left: -40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    
+  }
+  p{
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  img{
+    max-width: 50%;
+  }
+  .slid{
+    margin-left: 50px;
+  }
+  

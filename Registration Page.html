@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>    
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightgray;
+            color: black;
+            padding: 15px;
+            font-size: 70px;
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        h2{
+            color: black;
+            font-size: 60px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 400px;
+            margin-right: 400px;
+            margin-bottom: -10px;
+            background-color: lightgray;
+            border-radius: 15px;
+        }
+        .main-div1 div{
+            padding: 10px;
+            size: 80px;
+            color: white;
+            text-align: center;
+            margin-top: 25px;
+        }
+        .main-div1 label{
+            margin-left: -600px;
+        }
+        input[type=text] {
+            width: 700px;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        input[type=password]{
+            width: 700px;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid black;
+            
+        }
+        input[type=date] {
+            width: 650px;
+            padding: 20px;
+            margin-right: 10px;
+        }
+        h3{
+            font-size: 60px;
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 400px;
+            margin-right: 398px;
+            margin-bottom: 40px;
+            background-color: lightgray;
+            border-radius: 15px;
+        }
+        
+        .main-div2 {
+            padding: 20px;
+            margin: -35px 250px 250px 390px;
+            color: white;
+            size: 80px;
+        }
+        .main-div2 label{
+            margin-left: 13px;
+
+        }
+        h4{
+            font-size: 60px;
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: -5px;
+            margin-right: 120px;
+            margin-bottom: 40px;
+            background-color: lightgray;
+            border-radius: 15px;
+        }
+        .main-div3{
+            color: white;
+            size: 80px;
+        }
+        .main-div3 label{
+            margin-left: 11px;
+        }
+        input[list]{
+            width: 700px;
+            box-sizing: border-box;
+            padding: 20px;
+
+        }
+        input[type=radio] {
+            padding: 45px;
+            width: 100px;
+            text-size-adjust: flex;
+            border: 55px;
+            margin: 15px 550px 15px 200px;
+        }
+        input[type=submit] {
+            border: 10px;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 500px;
+            margin: 50px 35px -50px 60px;
+            background-color: orange;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            margin-left: 85px;
+            cursor: pointer;
+            color: black;
+            font-weight: 700;
+        }
+        label{
+            font-family: sans-serif;
+            margin-left: 50px;
+            color: black;
+        }
+        
+        hr{
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+        }
+        
+    </style>
+</head>
+<body background="register back.jpg">
+    <h1>
+        CREATE AN ACCOUNT
+    </h1>
+    <hr>
+    <h2>
+        PERSONAL DETAILS
+    </h2>
+    <form action="" method="">
+        <div class="main-div1">
+            <div>
+                <label for="fname">First Name</label><br>
+            <input type="text" placeholder="First Name"><br>
+            
+            
+                <label for="lname">Last Name</label><br> 
+            <input type="text" placeholder="Last Name"><br>
+            
+            
+                
+                <label for="gender">Select Gender</label> <br>
+                <input list="gender" placeholder="Gender"><br>
+                <datalist id="gender">
+                    <option value="Male"></option>
+                    <option value="Female"></option>
+                </datalist>
+
+            
+                        <label for="con">Country</label><br>
+                    <input list="con" placeholder="Country"><br>
+                    <datalist id="con">
+                        <option value="Australia"></option>
+                        <option value="Bangladesh"></option>
+                        <option value="Canada"></option>
+                        <option value="Denmark"></option>
+                        <option value="Egypt"></option>
+                        <option value="France"></option>
+                        <option value="Germany"></option>
+                        <option value="Hong Kong"></option>
+                        <option value="Ireland"></option>
+                        <option value="India"></option>
+                        <option value="Japan"></option>
+                        <option value="Kenya"></option>
+                        <option value="Libya"></option>
+                        <option value="Malaysia"></option>
+                        <option value="Maldives"></option>
+                        <option value="New Zealand"></option>
+                        <option value="Oman"></option>
+                        <option value="Pakistan"></option>
+                        <option value="Qatar"></option>
+                        <option value="Republic Of Korea"></option>
+                        <option value="Singapore"></option>
+                        <option value="Turkey"></option>
+                        <option value="United States Of America"></option>
+                        <option value="United Kingdom"></option>
+                        <option value="Vietnam"></option>
+                        <option value="Western Sahara"></option>
+                        <option value="Yemen"></option>
+                        <option value="Zimbabwe"></option>
+                </datalist><br>
+            
+                        <label for="occ">Occupation</label><br>
+                    <input list="occ" placeholder="Occupation"><br>
+                    <datalist id="occ">
+                        <option value="Government"></option>
+                        <option value="Public"></option>
+                        <option value="Private"></option>
+                        <option value="Self Employed"></option>
+                        <option value="Student"></option>
+                        <option value="Other"></option>
+                    </datalist><br>
+            
+                <label for="dob">Date Of Birth</label><br>
+            <input type="date" id="dob" placeholder="Date Of Birth"><br>
+            
+                <label for="email">Email</label><br>
+            <input type="text" placeholder="email"><br>
+        
+                <label for="mob">Mobile</label><br>
+            <input type="text"  maxlength="10" placeholder="Mobile"><br>
+            </div>
+        </div>
+    </form>
+    <h3>
+        BASIC DETAILS
+    </h3>
+    <form action="" method="">
+        <div class="main-div2">
+            <div>
+                    <label for="uname">User Name</label><br>
+                <input type="text" id="user" maxlength="8" placeholder="Username"><br>     
+        
+                     <label for="pass">Password</label><br>
+                 <input type="password" id="pass" minlength="8" placeholder="Password"><br>
+        
+                    <label for="cpass">Confirm Password</label><br>
+                <input type="password" id="cpass" minlength="8" placeholder="Confirm Password"><br>
+    
+                    <label for="lan">Preferred Language</label><br>
+                <input list="lan" placeholder="Preferred Language"><br>
+                <datalist id="lan">
+                    <option value="English"></option><br>
+                    <option value="हिन्दी"></option><br>
+                    <option value="తెలుగు"></option><br>
+                </datalist><br>
+        
+                    <label for="secq">Security Question</label><br>
+                <input list="secq" placeholder="Security Question"><br>
+                <datalist id="secq">
+                    <option value="What is your Pet Name?"></option>
+                    <option value="What is Name Of Your First School?"></option>
+                    <option value="What is Your Favourite Sport?"></option>
+                </datalist><br>
+    
+            <label for="seca">Security Answer</label><br>
+        <input type="text" placeholder="Security Answer"><br>
+        </div>
+    </form>
+    <h4>
+        ADDRESS
+    </h4>
+    <form action="" method="">
+        <div class="main-div3">
+    
+            <div>
+                <label for="fl/dr/bl">Flat/Door/Block No.</label><br>
+            <input type="text" placeholder="Flat/Door/Block No."><br>
+            
+                <label for="str/la">Street/Lane</label><br>
+            <input type="text" placeholder="Street/Lane"><br>
+                <label for="area">Area</label><br>
+            <input type="text"  placeholder="Area"><br>
+            
+                <label for="pin">Pin Code</label><br>
+            <input type="text" placeholder="Pin Code"><br>
+                    <label for="city">City</label><br>
+                <input list="city" placeholder="City"><br>
+                <datalist id="city">
+                    <option value="Ahmedabad"></option>
+                    <option value="Amritsar"></option>
+                    <option value="Agartala"></option>
+                    <option value="Agra"></option>
+                    <option value="Bengaluru"></option>
+                    <option value="Bilaspur"></option>
+                    <option value="Bhopal"></option>
+                    <option value="Cuttack"></option>
+                    <option value="Chennai"></option>
+                    <option value="Chandigarh"></option>
+                    <option value="Dharmashala"></option>
+                    <option value="Dehradun"></option>
+                    <option value="Gandhinagar"></option>
+                    <option value="Gangtok"></option>
+                    <option value="Hyderabad"></option>
+                    <option value="Haridwar"></option>
+                    <option value="Itanagar"></option>
+                    <option value="Indore"></option>
+                    <option value="Jammu"></option>
+                    <option value="Jalandhar"></option>
+                    <option value="Jaipur"></option>
+                    <option value="Kolkata"></option>
+                    <option value="Karimnagar"></option>
+                    <option value="Lucknow"></option>
+                    <option value="Ludhiana"></option>
+                    <option value="Mumbai"></option>
+                    <option value="Mandi"></option>
+                    <option value="Mysore"></option>
+                    <option value="Nagarsol"></option>
+                    <option value="New Delhi"></option>
+                    <option value="Ongole"></option>
+                    <option value="Patna"></option>
+                    <option value="Phagwara"></option>
+                    <option value="Ranchi"></option>
+                    <option value="Raipur"></option>
+                    <option value="Renigunta"></option>
+                    <option value="Surat"></option>
+                    <option value="Srikakulam"></option>
+                    <option value="Thiruvananthapuram"></option>
+                    <option value="Tirupati"></option>
+                    <option value="Udaipur"></option>
+                    <option value="Visakhapatnam"></option>
+                    <option value="Vijayawada"></option>
+                </datalist><br>
+                    <label for="state">State</label><br>
+                <input list="state" placeholder="State"><br>
+                <datalist id="state">
+                    <option value="Andhra Pradesh"></option>
+                    <option value="Arunachal Pradesh"></option>
+                    <option value="Assam"></option>
+                    <option value="Bihar"></option>
+                    <option value="Chattisgarh"></option>
+                    <option value="Goa"></option>
+                    <option value="Gujarat"></option>
+                    <option value="Haryana"></option>
+                    <option value="Himachal Pradesh"></option>
+                    <option value="Jharkhand"></option>
+                    <option value="Karnataka"></option>
+                    <option value="Kerala"></option>
+                    <option value="Madhya Pradesh"></option>
+                    <option value="Maharashtra"></option>
+                    <option value="Manipur"></option>
+                    <option value="Meghalaya"></option>
+                    <option value="Mizoram"></option>
+                    <option value="Nagaland"></option>
+                    <option value="Odisha"></option>
+                    <option value="Punjab"></option>
+                    <option value="Rajasthan"></option>
+                    <option value="Sikkim"></option>
+                    <option value="Tamilnadu"></option>
+                    <option value="Telangana"></option>
+                    <option value="Tripura"></option>
+                    <option value="Uttarakhand"></option>
+                    <option value="Uttar Pradesh"></option>
+                    <option value="West Bengal"></option>
+                </datalist><br>
+            </div>
+        </div>
+    </form>
+    <div class="main-div4">
+        <form action="" method="">
+            <input type="submit" value="Register" >
+        </form>
+    </div>
+</body>
+</html>
