@@ -1,0 +1,215 @@
+body {
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+table {
+    margin: 10px auto; /* Centers tables horizontally */
+    border-collapse: collapse; /* Optional: Ensures cleaner borders */
+}
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+h1{
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4678b2;
+    color: white;
+}
+p{
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+#t1 th {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 2px solid grey; /* Border only on the right side */
+    background-color: #4678b2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+
+/* Optional: Add border to the last header cell for better alignment */
+#t1 th:last-child {
+    border-right: none;
+}
+#t1 td{
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border: 2px solid grey; /* Border only on the right side */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+
+#t2 th {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 2px solid grey; /* Border only on the right side */
+    background-color: #4678b2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+
+/* Optional: Add border to the last header cell for better alignment */
+#t2 th:last-child {
+    border-right: none;
+}
+#t2 td{
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border: 2px solid grey; /* Border only on the right side */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+
+#t3 th {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 2px solid grey; /* Border only on the right side */
+    background-color: #4678b2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+
+/* Optional: Add border to the last header cell for better alignment */
+#t3 th:last-child {
+    border-right: none;
+}
+#t3 td{
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border: 2px solid grey; /* Border only on the right side */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+
+#b1{
+    font-size: larger;
+    text-align: center;
+    align-items: center;
+    background-color: #4678b2;
+    color: white;
+}
+#b2{
+    font-size: larger;
+    text-align: center;
+    align-items: center;
+    background-color: #4678b2;
+    color: white;
+}
+
+h2{
+    font-size: large;
+    text-align: center;
+    color: #5a00f5;
+}
+
+
+#t4 th {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-right: 2px solid grey; /* Border only on the right side */
+    background-color: #4678b2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    padding: 10px;
+}
+
+/* Optional: Add border to the last header cell for better alignment */
+#t4 th:last-child {
+    border-right: none;
+}
+#t4 td{
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border: 2px solid grey; /* Border only on the right side */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    padding: 10px;
+}
+
+legend {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: #4678b2; /* Match the table header color */
+    color: white;
+    padding: 5px 20px; /* Adjust padding as needed */
+    display: block; /* Ensures full-width alignment */
+    width: 100%;
+}
+
+.topnav {
+    background-color: #4678b2;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    padding: 10px 0;
+}
+
+/* Adjust the links to be inline */
+.topnav a {
+    float: none; /* Remove float */
+    display: inline-block; /* Ensures links stay inline */
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+.topnav a:first-child {
+    pointer-events: none; /* Disables hover effects */
+    font-weight: bold; /* Optional: Make it stand out */
+}
+
+.topnav a:not(:first-child):hover {
+    background-color: white;
+    color: black;
+}

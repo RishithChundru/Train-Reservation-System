@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNR Status</title>
+    <link rel="stylesheet" href="pnr_status.css">
+    <script>
+        function clearInput() {
+            document.getElementById("pnr_input").value = ""; // Clear the input field
+        }
+
+        function submitPNR() {
+            var pnrNumber = document.getElementById("pnr_input").value;
+
+            // Check if the PNR number is exactly 10 digits long
+            if (pnrNumber.length === 10 && /^\d{10}$/.test(pnrNumber)) {
+                // Redirect to pnr_status.html and pass the PNR number as a query parameter
+                window.location.href = "pnr_status.html?pnr=" + pnrNumber;
+            } else {
+                alert("Please enter a valid PNR number consisting of exactly 10 digits.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Passenger Current Status Enquiry
+    </h1>
+    <h2>
+        Enter the PNR for your booking below to get the current status. You will find it on the top left corner of the ticket.
+    </h2>
+    <div>
+        <label for="pnr_input">Enter PNR Number:</label>
+        <input type="text" id="pnr_input" placeholder="Enter PNR Number"><br>
+        <button id="pnr_submit" type="button" onclick="submitPNR()">Submit</button>
+        <button type="button" onclick="clearInput()">Clear</button> <!-- Clear Button -->
+    </div>
+</body>
+</html>

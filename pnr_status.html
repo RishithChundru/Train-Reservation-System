@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pnr_status.css"
+</head>
+<body>
+    <div class="topnav">
+        <a>Mini IRCTC</a>
+        <a href="#pnr enquiry">PNR Enquiry</a>
+        <a href="#Reserved train between stations">Reserved Train Between Stations</a>
+        <a href="#Seat availability">Seat Availability</a>
+        <a href="#fare enquiry">Fare Enquiry</a>
+        <a href="#reserved train schedule">Reserved Train Schedule</a>
+      </div>
+    <p>
+        <h1>
+            Passenger Current Status Enquiry
+        </h1>
+    </p>
+    <p id="pnr_display">
+        You Queried for: <strong>PNR Number: </strong><span id="pnr_number"></span>
+    </p>
+    <table id="t1">
+        <tr>
+            <th>Train Number</th>
+            <th>Train Name</th>
+            <th>Boarding Date<br>
+                (DD-MM-YYYY)</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Reserved Upto</th>
+            <th>Boarding Point</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>12345</td>
+            <td>himsagar</td>
+            <td>12-03-2005</td>
+            <td>vjy</td>
+            <td>pgw</td>
+            <td>pgw</td>
+            <td>vjy</td>
+            <td>3A</td>
+        </tr>
+        
+    </table>
+    <table id="t2">
+        <tr>
+            <th>S.No.</th>
+            <th>Booking Status (Coach No , Berth No., Quota)</th>
+            <th>*Current Status (Coach No , Berth No.)</th>
+            <th>Coach Position</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Confirmed</td>
+            <td>S1-34</td>
+            <td>S1</td>
+        </tr>
+        
+    </table>
+    <table id="t3">
+        <tr>
+            <th>Total Fare</th>
+            <th>Charting Status</th>
+            <th>Remarks if any</th>
+            <th>Train Status</th>
+        </tr>
+        <tr>
+            <td>789.90 /-</td>
+            <td>Not Prepared</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+    </table>
+    <button id="b1" type="button">Get Schedule</button>
+    <button id="b2" type="button">Train Running Status</button>
+    <h2>*Please Note that in case the Final Charts have not been prepared, the Current Status might upgrade/downgrade at a later stage.</h2>
+    
+    <table id="t4">
+        <tr>
+            <th>Legends</th></th>
+        </tr>
+        <tr>
+            <th>Symbol</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>CAN / MOD<br></td>
+            <td>Cancelled or Modified Passenger</td>
+        </tr>
+        <tr>
+            <td>CNF / Confirmed</td>
+            <td>Confirmed (Coach/Berth number will be available after chart preparation)</td>
+        </tr>
+        <tr>
+            <td>RAC</td>
+            <td>Reservation Against Cancellation</td>
+        </tr>
+        <tr>
+            <td>WL #</td>
+            <td>Waiting List Number</td>
+        </tr>
+        <tr>
+            <td>RLWL</td>
+            <td>Remote Location Wait List</td>
+        </tr>
+        <tr>
+            <td>GNWL</td>
+            <td>General Wait List</td>
+        </tr>
+        <tr>
+            <td>PQWL</td>
+            <td>Pooled Quota Wait List</td>
+        </tr>
+        <tr>
+            <td>REGRET/WL</td>
+            <td>No More Booking Permitted</td>
+        </tr>
+        <tr>
+            <td>RELEASED</td>
+            <td>Ticket Not Cancelled but Alternative Accommodation Provided</td>
+        </tr>
+        <tr>
+            <td>R# #</td>
+            <td>RAC Coach Number Berth Number</td>
+        </tr>
+        <tr>
+            <td>WEBCAN</td>
+            <td>Railway Counter Ticket Passenger cancelled through internet and Refund not collected</td>
+        </tr>
+        <tr>
+            <td>WEBCANRF</td>
+            <td>Railway Counter Ticket Passenger cancelled through internet and Refund collected</td>
+        </tr>
+        <tr>
+            <td>RQWL</td>
+            <td>Roadside Quota Waitlist</td>
+        </tr>
+        <tr>
+            <td>DPWL</td>
+            <td>Duty Pass Waitlist</td>
+        </tr>
+        <tr>
+            <td>TQWL</td>
+            <td>Tatkal Quota Waitlist</td>
+        </tr>
+        <tr>
+            <td>NT</td>
+            <td>Passenger Not Turned Up</td>
+        </tr>
+        <tr>
+            <td>TDR</td>
+            <td>Passenger has filed TDR</td>
+        </tr>
+    </table>
+    <script>
+        // Get the PNR number from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const pnr = urlParams.get('pnr');
+
+        // Display the PNR number in the <p> tag with id "pnr_number"
+        if (pnr) {
+            document.getElementById("pnr_number").textContent = pnr;
+        }
+        else {
+            document.getElementById("pnr_display").textContent = "No PNR found. Please try again.";
+        }
+    </script>
+</body>
+</html>
