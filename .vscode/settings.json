@@ -1,3 +1,4 @@
 {
-    "liveshare.publishWorkspaceInfo": true
+    "liveshare.publishWorkspaceInfo": true,
+    "liveServer.settings.port": 5501
 }

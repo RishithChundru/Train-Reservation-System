@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDR Complaint Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #4678b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>TDR Complaint Form</h2>
+        <form action="https://formspree.io/f/mnnjeodw" method="POST">
+            <label for="name">IRCTC User Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="pnr">PNR Number:</label>
+            <input type="text" id="pnr" name="pnr" required>
+            
+            <label for="reason">Reason for TDR:</label>
+            <select id="reason" name="reason" required>
+                <option value="Train canceled by Railways">Train canceled by Railways</option>
+                <option value="Train running late by more than 3 hours">Train running late by more than 3 hours</option>
+                <option value="Passenger not traveled">Passenger not traveled</option>
+                <option value="Difference in fare due to lower class travel">Difference in fare due to lower class travel</option>
+                <option value="AC failure in train">AC failure in train</option>
+                <option value="Coach not attached">Coach not attached</option>
+                <option value="Travelled without proper ID">Travelled without proper ID</option>
+                <option value="Tatkal ticket cancellation">Tatkal ticket cancellation</option>
+                <option value="Party partially traveled">Party partially traveled</option>
+                <option value="Passenger shifted to a lower class">Passenger shifted to a lower class</option>
+            </select>
+            
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </div>
+</body>
+</html>
