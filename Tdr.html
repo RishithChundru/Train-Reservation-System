@@ -59,16 +59,16 @@
 <body>
     <div class="container">
         <h2>TDR Complaint Form</h2>
-        <form action="https://formspree.io/f/mnnjeodw" method="POST">
+        <form id="tdrForm" action="https://formspree.io/f/mnnjeodw" method="POST">
             <label for="name">IRCTC User Name:</label>
             <input type="text" id="name" name="name" required>
-            
+        
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+        
             <label for="pnr">PNR Number:</label>
             <input type="text" id="pnr" name="pnr" required>
-            
+        
             <label for="reason">Reason for TDR:</label>
             <select id="reason" name="reason" required>
                 <option value="Train canceled by Railways">Train canceled by Railways</option>
@@ -82,9 +82,26 @@
                 <option value="Party partially traveled">Party partially traveled</option>
                 <option value="Passenger shifted to a lower class">Passenger shifted to a lower class</option>
             </select>
-            
+        
             <button type="submit">Submit Complaint</button>
         </form>
+        
+        <script>
+            document.getElementById("tdrForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+                fetch(this.action, {
+                    method: this.method,
+                    body: new FormData(this),
+                    headers: { 'Accept': 'application/json' }
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = "thankyou_tdr.html"; // Redirect to thank you page
+                    } else {
+                        alert("Submission failed. Please try again.");
+                    }
+                }).catch(error => alert("Something went wrong!"));
+            });
+        </script>        
     </div>
 </body>
 </html>

@@ -59,7 +59,7 @@
 <body>
     <div class="container">
         <h2>Feedback Form</h2>
-        <form action="https://formspree.io/f/mrbenoqo" method="POST">
+        <form id="feedbackForm" action="https://formspree.io/f/mrbenoqo" method="POST">
             <label for="name">IRCTC User Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -71,6 +71,24 @@
             
             <button type="submit">Submit</button>
         </form>
+        
+        <script>
+            document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                fetch(this.action, {
+                    method: this.method,
+                    body: new FormData(this),
+                    headers: { 'Accept': 'application/json' }
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = "thankyou_feedback.html"; // Redirect to Feedback page
+                    } else {
+                        alert("Submission failed. Please try again.");
+                    }
+                }).catch(error => alert("Something went wrong!"));
+            });
+        </script>
     </div>
 </body>
 </html>
