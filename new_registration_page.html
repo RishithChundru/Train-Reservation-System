@@ -15,100 +15,40 @@
         <div class="progress-bar">
             <div class="step active">1</div>
             <div class="step">2</div>
-            <div class="step">3</div>
         </div>
 
-        <form id="regForm">
-            
-            <!-- Step 1: Personal Details -->
+        <form id="regForm" action="homepage.html" method="get">
+            <!-- Step 1: User Details -->
             <div class="tab">
-                <h2>Personal Details</h2>
-                <label>First Name:</label>
-                <input type="text" required>
+                <h2>User Details</h2>
+                <label>Mobile Number:</label>
+                <input type="tel" name="mobile" required>
 
-                <label>Last Name:</label>
-                <input type="text" required>
-
-                <label>Gender:</label>
-                <select required>
-                    <option value="">Select</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
-                </select>
-
-                <label>Country:</label>
-                <input type="text" required>
-
-                <label>Occupation:</label>
-                <input type="text" required>
-
-                <label>Date of Birth:</label>
-                <input type="date" required>
+                <label>Username:</label>
+                <input type="text" name="username" required>
 
                 <label>Email:</label>
-                <input type="email" required>
+                <input type="email" name="email" required>
 
-                <label>Mobile:</label>
-                <input type="tel" required>
+                <label>Password:</label>
+                <input type="password" name="password" required>
 
                 <button type="button" onclick="nextPrev(1)">Next</button>
             </div>
 
-            <!-- Step 2: Account Details -->
+            <!-- Step 2: Security Details -->
             <div class="tab">
-                <h2>Account Details</h2>
-                <label>User Name:</label>
-                <input type="text" required>
-
-                <label>Password:</label>
-                <input type="password" required>
-
-                <label>Confirm Password:</label>
-                <input type="password" required>
-
-                <label>Preferred Language:</label>
-                <input type="text" required>
-
+                <h2>Security Details</h2>
                 <label>Security Question:</label>
-                <select required>
+                <select name="security_question" required>
                     <option value="">Select</option>
                     <option>What was your childhood nickname?</option>
-                    <option>What is the name of your favorite childhood friend?</option>
-                    <option>What was your first school name?</option>
                     <option>What is your favorite past-time?</option>
                     <option>What is your first mobile number?</option>
-                    <option>What is your father's middle name?</option>
-                    <option>What is your mother's maiden name?</option>
                 </select>
 
                 <label>Security Answer:</label>
-                <input type="text" required>
-
-                <button type="button" onclick="nextPrev(-1)">Previous</button>
-                <button type="button" onclick="nextPrev(1)">Next</button>
-            </div>
-
-            <!-- Step 3: Address Details -->
-            <div class="tab">
-                <h2>Address</h2>
-                <label>Flat/Door/Block No.:</label>
-                <input type="text" required>
-
-                <label>Street/Lane:</label>
-                <input type="text" required>
-
-                <label>Area:</label>
-                <input type="text" required>
-
-                <label>Pin Code:</label>
-                <input type="text" required>
-
-                <label>City:</label>
-                <input type="text" required>
-
-                <label>State:</label>
-                <input type="text" required>
+                <input type="text" name="security_answer" required>
 
                 <button type="button" onclick="nextPrev(-1)">Previous</button>
                 <button type="submit">Submit</button>
@@ -123,7 +63,7 @@
         function showTab(n) {
             let tabs = document.getElementsByClassName("tab");
             tabs[n].style.display = "block";
-            
+
             let steps = document.getElementsByClassName("step");
             for (let i = 0; i < steps.length; i++) {
                 steps[i].classList.remove("active");
