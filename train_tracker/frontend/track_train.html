@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Train Location</title>
+    <link rel="stylesheet" href="track_train.css">
+    <script defer src="track_train.js"></script> 
+</head>
+<body>
+
+    <h1>Train Running Status</h1>
+
+    <div>
+        <label for="train_input">Enter Train Number:</label>
+        <input type="text" id="train_input" placeholder="Enter Train Number"><br>
+        <button id="train_submit" type="button" onclick="fetchTrainStatus()">Submit</button>
+        <button type="button" onclick="clearInput()">Clear</button>
+    </div>
+
+    <div id="train_status">
+        <h2>Train Status</h2>
+        <p id="train_name"></p>
+        <p id="updated_time"></p>
+        <table id="train_data">
+            <thead>
+                <tr>
+                    <th>Station</th>
+                    <th>Distance</th>
+                    <th>Timing</th>
+                    <th>Delay</th>
+                    <th>Platform</th>
+                    <th>Halt</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    color: #333;
+}
+
+/* Train Input Section */
+div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Input Field */
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 2px solid #0056b3;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Submit Button */
+#train_submit {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Clear Button */
+button:nth-child(3) {
+    background-color: #f44336;
+    color: white;
+}
+
+button:nth-child(3):hover {
+    background-color: #d32f2f;
+}
+
+/* Train Status Section */
+#train_status {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none; /* Initially Hidden */
+}
+
+#train_status h2 {
+    color: #0056b3;
+}
+
+/* Train Data Table */
+#train_data {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#train_data th, #train_data td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#train_data th {
+    background-color: #0056b3;
+    color: white;
+}
+
+#train_data tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#train_data tr:hover {
+    background-color: #ddd;
+}
