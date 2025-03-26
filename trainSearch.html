@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train Booking</title>
+    <link rel="stylesheet" href="trainSearch.css" />
+  </head>
+  <body>
+    <div class="modifySearch">
+      <div id="dep">
+        <!--<label for="departure">From</label>-->
+        <input
+          type="text"
+          name="Departure"
+          id="departure"
+          placeholder="Departure"
+        />
+      </div>
+      <div id="swapBtn">
+        <button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/9870/9870522.png"
+            alt="Swap Places"
+          />
+        </button>
+      </div>
+      <div id="dest">
+        <!--<label for="destination">To</label>-->
+        <input
+          type="text"
+          name="Destination"
+          id="destination"
+          placeholder="Destination"
+        />
+      </div>
+      <div id="date">
+        <!--<label for="datePick">Date of Journey</label>-->
+        <input type="date" name="Date" id="datePick" />
+      </div>
+      <div id="classes">
+        <select name="classList" id="classlist">
+          <option value="All Classes">All Classes</option>
+          <option value="Anubhuti Class">Anubhuti Class (EA)</option>
+          <option value="AC First Class">AC First Class (1A)</option>
+          <option value="Vistadome AC">Vistadome AC (EV)</option>
+          <option value="Exec. Chair Car">Exec. Chair Car (EC)</option>
+          <option value="AC 2 Tier">AC 2 Tier (2A)</option>
+          <option value="First Class">First Class (FC)</option>
+          <option value="AC 3 Tier">AC 3 Tier (3A)</option>
+          <option value="AC 3 Economy">AC 3 Economy (3E)</option>
+          <option value="Vistadome Chair Car">Vistadome Chair Car (VC)</option>
+          <option value="AC Chair Car">AC Chair Car (CC)</option>
+          <option value="Sleeper">Sleeper (SL)</option>
+          <option value="Vistadome Non AC">Vistadome Non AC (VS)</option>
+          <option value="Second Sitting">Second Sitting (2S)</option>
+        </select>
+      </div>
+      <div id="quota">
+        <select name="Quota" id="quotaList">
+          <option value="General">General</option>
+          <option value="Ladies">Ladies</option>
+          <option value="Lower Berth/ SR. Citizen">
+            Lower Berth/ SR. Citizen
+          </option>
+          <option value="Person with Disability">Person with Disability</option>
+          <option value="Duty Pass">Duty Pass</option>
+          <option value="Tatkal">Tatkal</option>
+          <option value="Premium Tatkal">Premium Tatkal</option>
+        </select>
+      </div>
+      <div id="filters">
+        <div>
+          <input type="checkbox" id="flex" /> <span>Flexible With Date</span>
+        </div>
+        <div>
+          <input type="checkbox" id="avail" />
+          <span>Train With Available Berth</span>
+        </div>
+        <div>
+          <input type="checkbox" id="disable" />
+          <span>Person with Disability Concession</span>
+        </div>
+        <div>
+          <input type="checkbox" id="railPass" />
+          <span>Railway Pass Concession</span>
+        </div>
+      </div>
+      <button id="submit">Modify Search</button>
+    </div>
+
+    <div id="secondDiv">
+      <div id="refineResults">
+        <div id="top">
+          <p>Refine Results</p>
+          <button id="resetBtn">Reset Filters</button>
+        </div>
+        <br />
+        <hr />
+        <div id="depTime">
+          <p>Departure Time</p>
+          <br />
+          <button>
+            00:00 - 06:00 <br />
+            Early Morning
+          </button>
+          <button>06:00 - 12:00 <br />Morning</button>
+          <button>12:00 - 18:00 <br />Mid Day</button>
+          <button>18:00 - 24:00<br />Night</button>
+        </div>
+        <br />
+        <hr />
+        <div id="destTime">
+          <p>Arrival Time</p>
+          <br />
+          <button>
+            00:00 - 06:00 <br />
+            Early Morning
+          </button>
+          <button>06:00 - 12:00 <br />Morning</button>
+          <button>12:00 - 18:00 <br />Mid Day</button>
+          <button>18:00 - 24:00<br />Night</button>
+        </div>
+      </div>
+      <div id="trainResults">
+        <div class="trainCard">
+          <!-- <div id="first">
+            <p id="depToDest">Departure → Destination</p>
+            <h1 id="trainName">Train Name</h1>
+            <p id="runsOn">S M T W Th F Sa</p>
+          </div>
+          <div id="center">
+            <p id="depTime">Departure: </p>
+            <p id="trainID">Train ID</p>
+            <p id="arrTime">Arrival: </p>
+          </div>
+          <div id="bottom">
+            <div id="coaches">
+              <button id="sl">
+                <p>SL</p>
+                <p id="seatAvail">No seats Available</p>
+                <p id="price">₹0</p>
+              </button>
+              <button id="3a">
+                <p>3A</p>
+                <p id="seatAvail">No seats Available</p>
+                <p id="price">₹0</p>
+              </button>
+              <button id="3e">
+                <p>3E</p>
+                <p id="seatAvail">No seats Available</p>
+                <p id="price">₹0</p>
+              </button>
+              <button id="2a">
+                <p>2A</p>
+                <p id="seatAvail">No seats Available</p>
+                <p id="price">₹0</p>
+              </button>
+              <button id="1a">
+                <p>1A</p>
+                <p id="seatAvail">No seats Available</p>
+                <p id="price">₹0</p>
+              </button>
+            </div>
+            <button id="bookBtn">Book Now</button>
+          </div> -->
+      </div>
+    </div>
+  </body>
+  <script src="trainSearch.js"></script>
+</html>

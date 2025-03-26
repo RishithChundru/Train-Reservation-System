@@ -1,0 +1,295 @@
+/* Base Styles */
+.modifySearch {
+    background-color: #213d77;
+    padding: 15px;
+    border-radius: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+}
+
+/* Text Inputs */
+.modifySearch input[type='text'],
+.modifySearch input[type='date'],
+.modifySearch select {
+    height: 35px;
+    width: 180px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Swap Button */
+.modifySearch #swapBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modifySearch #swapBtn img {
+    height: 24px;
+    width: 24px;
+}
+
+/* Adjusting input spacing */
+.modifySearch #dep,
+.modifySearch #dest,
+.modifySearch #date,
+.modifySearch #classes,
+.modifySearch #quota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Filters */
+.modifySearch #filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Search Button */
+.modifySearch #submit {
+    background-color: #f8b400;
+    color: #213d77;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Ensure secondDiv maintains layout */
+#secondDiv {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Train Card Styling */
+.trainCard {
+    background-color: #f8f9fa;
+    color: black;
+    border-radius: 12px;
+    padding: 20px;
+    flex-grow: 1; /* Takes up remaining space */
+    max-width: calc(100% - 100px); /* Adjusts dynamically based on refineResults */
+    min-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.trainCard:hover {
+    transform: scale(1.02);
+}
+
+/* Card Sections */
+.trainCard #first,
+.trainCard #center,
+.trainCard #bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainCard #bottom {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Train Classes (Seats & Prices) */
+#coaches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trainCard button {
+    background-color: white;
+    color: black;
+    width: 160px;
+    height: 95px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #213d77;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.trainCard button:hover {
+    background-color: orange;
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* Book Now Button */
+#bookBtn {
+    background-color: #213d77;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+}
+
+#bookBtn:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* 🔹 Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 1024px) {
+    #secondDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trainCard {
+        max-width: 90%;
+        min-width: 450px;
+    }
+}
+
+/* Small Screens (Mobiles) */
+@media screen and (max-width: 768px) {
+    .trainCard {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .trainCard button {
+        width: 120px;
+        height: 75px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Screens (Phones under 480px) */
+@media screen and (max-width: 480px) {
+    .trainCard {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .trainCard button {
+        width: 100px;
+        height: 70px;
+        font-size: 12px;
+    }
+}
+
+
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .modifySearch {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modifySearch input[type='text'],
+    .modifySearch input[type='date'],
+    .modifySearch select {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .modifySearch #swapBtn {
+        order: -1; /* Moves swap button to top */
+    }
+}
+
+#refineResults {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 0px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 18px;
+}
+
+#refineResults #top{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 190px;
+    font-weight: bold;
+}
+
+#top button{
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    box-shadow: none;
+    border: none;
+    font-weight: bold;
+}
+
+#depTime, #destTime {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+    gap: 10px;
+    font-weight: bold;
+}
+
+#depTime button, #destTime button {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #213d77;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+#depTime button:hover, #destTime button:hover {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .modifySearch input[type='text'],
+    .modifySearch input[type='date'],
+    .modifySearch select {
+        width: 100%;
+    }
+
+    .modifySearch #filters {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #depTime button, #destTime button {
+        width: 100%; /* Stack buttons on smaller screens */
+    }
+}

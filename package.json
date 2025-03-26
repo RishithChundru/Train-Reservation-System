@@ -1,0 +1,29 @@
+{
+  "name": "mini-irctc-project",
+  "version": "1.0.0",
+  "description": "I've created a project train reservation system usind HTML,CSS.From this we can book train,bus,flight tickets.and we also can cancel the tickets.it has extra options like we can book meals and hotels during journey.",
+  "main": "trainSearch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RishithChundru/Train-Reservation-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RishithChundru/Train-Reservation-System/issues"
+  },
+  "homepage": "https://github.com/RishithChundru/Train-Reservation-System#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.0"
+  }
+}

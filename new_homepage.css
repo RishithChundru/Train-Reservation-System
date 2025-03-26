@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #1a6e1a; /* Primary green color */
+    --secondary-color: #2bab0d; /* Accent green */
+    --background-light: #f8f9fa;
+    --text-dark: #2c3e50;
+    --hover-transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+  }
+  
+  /* Header Styles */
+  .header-marquee {
+    background: var(--primary-color);
+    padding: 1rem 0;
+  }
+  
+  .header-title {
+    font-family: 'Optima', serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  /* Navigation Styles */
+  .nav-container {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .menu-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .nav-item {
+    position: relative;
+    padding: 1rem;
+    transition: var(--hover-transition);
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--hover-transition);
+  }
+  
+  .nav-item:hover {
+    background: var(--secondary-color);
+    border-radius: 4px;
+  }
+  
+  /* Dropdown Menu Styles */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .nav-item:hover .submenu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .submenu-list {
+    list-style: none;
+  }
+  
+  .submenu-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .submenu-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--hover-transition);
+  }
+  
+  .submenu-link:hover {
+    color: var(--secondary-color);
+    padding-left: 0.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Main Content Styles */
+  .hero-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .hero-subtitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+  }
+  
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin: 4rem 0;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--hover-transition);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .social-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: var(--hover-transition);
+  }
+  
+  .social-link:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 3rem;
+    }
+  
+    .nav-list {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  
+    .nav-item {
+      padding: 0.5rem;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-title {
+      font-size: 2rem;
+    }
+  
+    .nav-link {
+      font-size: 0.9rem;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  }

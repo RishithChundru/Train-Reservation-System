@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Registration Form</title>
+    <link rel="stylesheet" href="new_registration_page.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registration Form</h1> 
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+        </div>
+
+        <form id="regForm" action="homepage.html" method="get">
+            <!-- Step 1: User Details -->
+            <div class="tab">
+                <h2>User Details</h2>
+                <label>Mobile Number:</label>
+                <input type="tel" id="mobile" required>
+                
+                <label>Username:</label>
+                <input type="text" id="username" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" required>
+
+                <label>Date of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <label>Password:</label>
+                <input type="password" id="password" required>
+
+                <label>Confirm Password:</label>
+                <input type="password" id="confirm_password" required>
+                <p id="confirm_Password"></p>
+                <button type="button" onclick="nextPrev(1)">Next</button>
+            </div>
+
+            <!-- Step 2: Security Details -->
+            <div class="tab">
+                <h2>Security Details</h2>
+
+                <label>Security Question:</label>
+                <select id="security_question" required>
+                    <option value="">Select</option>
+                    <option>What was your childhood nickname?</option>
+                    <option>What is your favorite past-time?</option>
+                    <option>What is your first mobile number?</option>
+                </select>
+
+                <label>Security Answer:</label>
+                <input type="text" id="security_answer" required>
+
+                <button type="button" onclick="nextPrev(-1)">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let currentTab = 0;
+        showTab(currentTab);
+
+        function showTab(n) {
+            let tabs = document.getElementsByClassName("tab");
+            tabs[n].style.display = "block";
+
+            let steps = document.getElementsByClassName("step");
+            for (let i = 0; i < steps.length; i++) {
+                steps[i].classList.remove("active");
+            }
+            steps[n].classList.add("active");
+        }
+
+        function nextPrev(n) {
+            let tabs = document.getElementsByClassName("tab");
+
+            if (n === -1) {
+                tabs[currentTab].style.display = "none";
+                currentTab += n;
+                showTab(currentTab);
+                return;
+            }
+
+            let inputs = tabs[currentTab].querySelectorAll("input, select");
+            let valid = true;
+
+            for (let input of inputs) {
+                if (!input.value) {
+                    valid = false;
+                    input.style.border = "2px solid red";
+                } else {
+                    input.style.border = "";
+                }
+            }
+
+            // Password validation
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm_password").value;
+            if (password !== confirmPassword) {
+                valid = false;
+                document.getElementById("confirm_password").style.border = "2px solid red";
+                document.getElementById("confirm_Password").innerHTML="Passwords do not match!"
+            }
+
+            // Age validation (18+)
+            let dob = document.getElementById("dob").value;
+            if (dob) {
+                let birthDate = new Date(dob);
+                let age = new Date().getFullYear() - birthDate.getFullYear();
+                let monthDiff = new Date().getMonth() - birthDate.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && new Date().getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                if (age < 18) {
+                    valid = false;
+                    document.getElementById("dob").style.border = "2px solid red";
+                    alert("You must be at least 18 years old to register.");
+                }
+            }
+
+            if (valid) {
+                tabs[currentTab].style.display = "none";
+                currentTab += n;
+                if (currentTab >= tabs.length) {
+                    document.getElementById("regForm").submit();
+                    return;
+                }
+                showTab(currentTab);
+            }
+        }
+
+        document.getElementById("regForm").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            
+            const data = {
+                mobile: document.getElementById("mobile").value,
+                username: document.getElementById("username").value,
+                email: document.getElementById("email").value,
+                dob: document.getElementById("dob").value,
+                password: document.getElementById("password").value,
+                security_question: document.getElementById("security_question").value,
+                security_answer: document.getElementById("security_answer").value
+            };
+        
+            try {
+                const response = await fetch("http://localhost:5000/auth/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+        
+                const result = await response.json();
+                alert(result.msg);
+        
+                if (response.ok) {
+                    window.location.href = "/homepage.html";  // Redirect to homepage after successful registration
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
+        
+    </script>
+    
+</body>
+</html>
